@@ -1,0 +1,37 @@
+context:
+  version: 2.0.0
+
+package:
+  name: jaq
+  version: ${{ version }}
+
+source:
+  url: https://github.com/01mf02/jaq/archive/v${{ version }}.tar.gz
+  sha256: 7535387562c0e5519811bfd1f405eb8cb7683533781e0790981221e8e5b723c2
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - ${{ compiler('rust') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - cargo-bundle-licenses
+
+tests:
+  - script:
+      - jaq --help
+
+about:
+  license: MIT
+  license_file:
+    - LICENSE-MIT
+    - THIRDPARTY.yml
+  summary: JQ clone focussed on correctness, speed, and simplicity
+  homepage: https://github.com/01mf02/jaq
+  repository: https://github.com/01mf02/jaq
+
+extra:
+  recipe-maintainers:
+    - danielnachun
