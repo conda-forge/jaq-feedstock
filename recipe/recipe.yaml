@@ -1,5 +1,5 @@
 context:
-  version: "2.1.1"
+  version: "2.2.0"
 
 package:
   name: jaq
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/01mf02/jaq/archive/v${{ version }}.tar.gz
-  sha256: b8276f6618bd69b2d8feb8d76b927a6debe1bc950742d344643cc4e4d0849009
+  sha256: f2337ab0d86c9f5a1c380d3c83ab4f2171749eaaae9551e98d91331080b5beb9
 
 build:
   number: 0
